@@ -17,26 +17,28 @@ const SetTodo = () => {
   };
   return (
     <>
+        <form onSubmit={(e) => e.preventDefault()}>
       <div className="cont">
-        <div className="settodo">
-          <div className="todowidth">
-            <input
-              type="text"
-              onChange={(e) => setTodo(e.target.value)}
-              value={todo}
-            />
-            <button
-              className="btn"
-              onClick={() => {
-                setTodo("");
-                todo.length && list.push({ list: todo, status: false });
-              }}
-            >
-              +
-            </button>
+          <div className="settodo">
+            <div className="todowidth">
+              <input
+                type="text"
+                onChange={(e) => setTodo(e.target.value)}
+                value={todo}
+              />
+              <button
+                className="btn"
+                onClick={() => {
+                  setTodo("");
+                  todo.length && list.push({ list: todo, status: false });
+                }}
+              >
+                +
+              </button>
+            </div>
           </div>
-        </div>
       </div>
+        </form>
       <div className="tasktable">
         {list.map((i, idx) => (
           <div
@@ -44,7 +46,11 @@ const SetTodo = () => {
             style={{ backgroundColor: i?.status && "#06d6a0" }}
             key={idx}
           >
-            <p className="para" style={{color: i?.status && "black"}} onClick={() => changeS(i, idx)}>
+            <p
+              className="para"
+              style={{ color: i?.status && "black" }}
+              onClick={() => changeS(i, idx)}
+            >
               {i?.list}
             </p>
             <button className="btn-task" onClick={() => removeTodo(i, idx)}>
