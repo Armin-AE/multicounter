@@ -17,8 +17,8 @@ const SetTodo = () => {
   };
   return (
     <>
-        <form onSubmit={(e) => e.preventDefault()}>
-      <div className="cont">
+      <form onSubmit={(e) => e.preventDefault()}>
+        <div className="cont">
           <div className="settodo">
             <div className="todowidth">
               <input
@@ -37,8 +37,8 @@ const SetTodo = () => {
               </button>
             </div>
           </div>
-      </div>
-        </form>
+        </div>
+      </form>
       <div className="tasktable">
         {list.map((i, idx) => (
           <div
@@ -46,6 +46,7 @@ const SetTodo = () => {
             style={{ backgroundColor: i?.status && "#06d6a0" }}
             key={idx}
           >
+            <p>{idx + 1 + " |"}</p>
             <p
               className="para"
               style={{ color: i?.status && "black" }}
