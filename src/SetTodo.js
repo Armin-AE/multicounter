@@ -23,7 +23,7 @@ const SetTodo = () => {
         <div className="cont">
           <div className="settodo">
             <div className="todowidth">
-              <input
+              <input placeholder="Enter Your Task..."
                 type="text"
                 onChange={(e) => setTodo(e.target.value)}
                 value={todo}
