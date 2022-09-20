@@ -1,7 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
 const SetTodo = () => {
   const [todo, setTodo] = useState("");
-  const todosLocal = JSON.parse(localStorage.getItem("todos"));
+  const todosLocal = JSON.parse(localStorage.getItem("todos"))
+    ? JSON.parse(localStorage.getItem("todos"))
+    : [];
   const [list, setList] = useState(todosLocal.length ? todosLocal : []);
   localStorage.setItem("todos", JSON.stringify(list));
 
@@ -46,7 +48,7 @@ const SetTodo = () => {
             style={{ backgroundColor: i?.status && "#06d6a0" }}
             key={idx}
           >
-            <p>{idx + 1 + " |"}</p>
+            <p style={{display:'flex',width:'25px'}}>{idx + 1 + " |"}</p>
             <p
               className="para"
               style={{ color: i?.status && "black" }}
