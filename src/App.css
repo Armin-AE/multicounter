@@ -1,159 +1,48 @@
-:root {
-    --bradius: 10px;
-}
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-#root,
-HTMl {
-    background-color: #032b43;
 }
 
 .cont {
     display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+    justify-content: space-around;
+    text-align: center;
+    font-size: large;
 }
 
-.settodo {
-    padding: 1rem;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    border-radius: var(--bradius);
-    background-color: #3f88c5;
-}
-
-.todowidth {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-input {
-    width: 80%;
-    padding: .6rem;
-    border: 1px solid #032b43b6;
-    border-radius: var(--bradius);
-    font-size: medium;
-}
-
-.btn {
-    display: flex;
-    height: 45px;
-    width: 45px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    font-size: x-large;
-    box-shadow: 0 1px 5px rgba(48, 45, 45, 0.527);
-    transition: 0.3s;
-    background-color: #032b43;
+html {
+    background-color: rgb(22, 22, 22);
     color: white;
-    border: none;
 }
 
-.btn:hover {
-    background-color: white;
-    color: #032b43;
-    transform: rotate(360deg);
-}
-
-.btn:active {
-    opacity: 80%;
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #6d6d6d67;
+    border-radius: 7px;
+    height: 50px;
 }
 
 button {
-    cursor: pointer;
-}
-
-.tasktable {
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    margin-top: 50px;
-    border: 0px solid red;
-}
-
-.mytasks {
-    background-color: #007ea7;
-    border-radius: 10px;
-    width: 40%;
-    height: 75px;
-    align-items: center;
-    color: white;
-    position: relative;
-    bottom: 100px;
-    z-index: -1;
-    opacity: 6%;
-    display: flex;
-    margin-top: 20px;
-    justify-content: space-between;
-    animation: myanim 1s ease alternate both;
-    box-shadow: 0 1px 2px black;
-}
-
-.mytasks p {
-    margin-left: 10px;
-}
-
-.btn-task {
-    display: flex;
-    height: 30px;
-    width: 30px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    font-size: large;
-    box-shadow: 0 1px 5px rgba(48, 45, 45, 0.527);
-    background-color: #032b43;
-    color: white;
+    width: 200px;
+    padding: 1rem;
+    background-color: #00b4d8;
     border: none;
-    margin-right: 10px;
-    transition: 0.3s;
-}
-
-.btn-task:active {
-    opacity: 80%;
-}
-
-@keyframes myanim {
-    0% {
-        opacity: 3%;
-        z-index: -1;
-        bottom: 100px;
-        filter: blur(7px);
-        background-color: #093f6b;
-    }
-
-    100% {
-        opacity: 100%;
-        z-index: 1;
-        bottom: 0;
-        filter: blur(0px);
-    }
-}
-
-.para {
     cursor: pointer;
-    width: 90%;
-    height: 70%;
-    display: flex;
-    align-items: center;
+    border-left: 1px solid rgb(31, 31, 31);
+    outline: none;
+    border-radius: 7px;
+    transition: .2s;
+    font-size: 20px;
+
 }
 
-.para:hover {
-    opacity: 80%;
+button:hover {
+    background-color: #1c849e;
 }
 
-@media screen and (max-width: 1080px) {
-    .settodo {
-        width: 85%
-    }
-
-    .mytasks {
-        width: 85%;
-    }
-
-    .btn {
-        margin-left: 17px;
-    }
+button:active {
+    scale: +1.05;
 }
