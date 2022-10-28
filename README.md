@@ -1,3 +1,7 @@
+You can press next button for starting right timer and prev button for starting left timer.
+
+------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
